@@ -3,3 +3,22 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+td, th{
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.input{
+  margin: 20px 0px;
+}
+
+svg{
+  height: 150px;
+}
+
+td:nth-of-type(2), td:nth-of-type(2) > div{
+  height: 300px;
+  width: 350px;
+}
