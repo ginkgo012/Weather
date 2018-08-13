@@ -5,7 +5,7 @@ import Chart from '../components/chart';
 import GoogleMap from '../components/google_map';
 
 class WeatherList extends Component {
-    renderWeather(cityData){
+         renderWeather(cityData){
         const name = cityData.city.name;
         const temps = _.map(cityData.list.map(weather => weather.main.temp), (temp)=>{return temp-273.15});
         const pressures = cityData.list.map(weather => weather.main.pressure);
@@ -15,7 +15,10 @@ class WeatherList extends Component {
 
         return(
             <tr key={name}>
-                <td>{name}</td>
+                <td>
+                    {name}
+                    {/* <button onClick={this.onClickCity.bind(this)}>x</button> */}
+                </td>
                 <td><GoogleMap lon={lon} lat={lat}/></td>
                 <td><Chart data={temps} color="orange" units="&#8451;"/></td>
                 <td><Chart data={pressures} color="green" units="hPa"/></td>
@@ -26,7 +29,7 @@ class WeatherList extends Component {
     
     render(){
         return(
-            <table className="table table-hover">
+            <table className="table table-hover ">
                 <thead>
                     <tr>
                         <th>City</th>
