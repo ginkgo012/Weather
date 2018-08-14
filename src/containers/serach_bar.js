@@ -12,7 +12,7 @@ class SearchBar extends Component{
     }
 
     onInputChange(event){
-        console.log(event.target.value);
+        // console.log(event.target.value);
         this.setState({term:event.target.value})
     }
 
@@ -24,9 +24,10 @@ class SearchBar extends Component{
     
     render(){
         return(
+            <div className="mb-3 mt-3">
             <form onSubmit={this.onFormSubmit} className="input-group">
                 <input 
-                 placeholder="Get a five-day forecast in your faiorte cities"
+                 placeholder="Please type your interested cities, for example 'Copenhagen' or 'Copenhagen,DK'"
                  className="form-control"
                  value={this.state.term}
                  onChange={this.onInputChange}/>
@@ -34,6 +35,7 @@ class SearchBar extends Component{
                     <button type="submit" className="btn btn-secondary">Submit</button>
                 </span>
             </form>
+            </div>
         )
     }
 

@@ -15,10 +15,14 @@ td, th{
 }
 
 svg{
-  height: 150px;
+  height: 80px;
+}
+
+table .w-10 {
+  width:10%;
 }
 
 td:nth-of-type(2), td:nth-of-type(2) > div{
-  height: 120px;
-  width: 180px;
+  height: 100px;
+  width: 150px;
 }
